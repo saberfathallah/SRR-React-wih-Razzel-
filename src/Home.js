@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import logo from './react.svg';
 import './Home.css';
 
@@ -6,6 +7,12 @@ class Home extends React.Component {
   render() {
     return (
       <div className="Home">
+        <Helmet
+          title={'titleHome'}
+          meta={[
+            { name: 'description', content: 'seoDescriptionHome' },
+          ]}
+        />
         <div className="Home-header">
           <img src={logo} className="Home-logo" alt="logo" />
           <h2>Welcome to Razzle</h2>
